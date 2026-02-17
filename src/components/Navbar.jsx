@@ -120,8 +120,8 @@ const Navbar = () => {
         <div className="px-4 py-6 flex flex-col gap-4">
           <Link
             to="/vendor"
-            target="_blank"
-            rel="noreferrer"
+            // target="_blank"
+            // rel="noreferrer"
             onClick={() => setOpen(false)}
             className="text-lg font-semibold text-deep-black"
           >
