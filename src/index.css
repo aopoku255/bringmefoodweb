@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+
+
+@theme {
+  --color-deep-black: #232042;
+  --font-sans: "Inter", sans-serif, Arial, Helvetica, sans-serif;
+}
