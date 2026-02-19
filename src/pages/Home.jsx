@@ -1,7 +1,7 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
+import { memo } from "react";
 
 const Home = () => {
   return (
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

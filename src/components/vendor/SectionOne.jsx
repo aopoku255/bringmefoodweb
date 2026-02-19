@@ -74,6 +74,7 @@ const SectionOne = () => {
               src={achievesimage}
               alt="Achieve illustration"
               className="max-h-140 w-auto rounded-xl"
+              loading="lazy" decoding="async"
             />
           </div>
 

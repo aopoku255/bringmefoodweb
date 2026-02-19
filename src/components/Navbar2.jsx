@@ -50,7 +50,7 @@ const Navbar2 = () => {
             <div className="flex items-center justify-between gap-6">
               {/* Logo */}
               <Link to="/" className="shrink-0">
-                <img src={logo} alt="BringMe Food" className="h-10 sm:h-12" />
+                <img src={logo} alt="BringMe Food" className="h-10 sm:h-12" loading="lazy" decoding="async"/>
               </Link>
 
               {/* Desktop links */}
@@ -71,7 +71,7 @@ const Navbar2 = () => {
                   className="flex items-center gap-x-1"
                   aria-label="Change language"
                 >
-                  <img src={globe} alt="Globe" className="h-4" />
+                  <img src={globe} alt="Globe" className="h-4" loading="lazy" decoding="async"/>
                   <span className="font-normal text-sm">English</span>
                 </button>
               </div>
@@ -105,7 +105,7 @@ const Navbar2 = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-4 border-b">
-          <img src={logo} alt="BringMe Food" className="h-10" />
+          <img src={logo} alt="BringMe Food" className="h-10" loading="lazy" decoding="async"/>
           <button
             type="button"
             onClick={() => setMenuOpen(false)}
@@ -148,7 +148,7 @@ const Navbar2 = () => {
             className="flex items-center justify-center gap-x-2 bg-gray-200 px-5 py-3 rounded-full"
             aria-label="Change language"
           >
-            <img src={globe} alt="Globe" className="h-4" />
+            <img src={globe} alt="Globe" className="h-4" loading="lazy" decoding="async"/>
             <span className="text-sm">English</span>
           </button>
         </div>

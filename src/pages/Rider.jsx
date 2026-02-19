@@ -1,4 +1,4 @@
-import React from 'react'
+import {memo} from 'react'
 import Banner from '../components/Banner'
 import SectionThree from '../components/vendor/SectionThree'
 import Footer from '../components/Footer'
@@ -15,4 +15,4 @@ const Rider = () => {
   )
 }
 
-export default Rider
+export default memo(Rider)

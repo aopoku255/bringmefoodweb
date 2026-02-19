@@ -56,7 +56,7 @@ const Navbar = () => {
               className="flex items-center gap-x-1"
               aria-label="Change language"
             >
-              <img src={globe} alt="Globe" className="h-4" />
+              <img src={globe} alt="Globe" className="h-4" loading="lazy" decoding="async"/>
               <span className="font-normal text-sm">English</span>
             </button>
           </div>
@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="py-4 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Logo */}
-          <img src={logo} alt="BringMe Food" className="h-12 sm:h-16" />
+          <img src={logo} alt="BringMe Food" className="h-12 sm:h-16" loading="lazy" decoding="async"/>
 
           {/* Desktop CTA */}
           <Link
@@ -106,7 +106,7 @@ const Navbar = () => {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-4 border-b">
-          <img src={logo} alt="BringMe Food" className="h-10" />
+          <img src={logo} alt="BringMe Food" className="h-10" loading="lazy" decoding="async"/>
           <button
             type="button"
             onClick={() => setOpen(false)}

@@ -15,7 +15,7 @@ const Banner = ({showRight = true, showSub =true, showBtn}) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
 
           {/* LEFT TEXT */}
-          <div className="min-h-[80vh] lg:min-h-[640px] flex flex-col justify-center text-center lg:text-left">
+          <div className="min-h-[80vh] lg:min-h-160 flex flex-col justify-center text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Become a BringMe Food vendor and grow your business
             </h1>

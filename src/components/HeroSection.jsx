@@ -22,6 +22,8 @@ const HeroSection = () => {
             <img
               src={hero}
               alt="BringMe Food"
+              loading="lazy"
+              decoding="async"
               className="w-full max-w-sm sm:max-w-md md:max-w-none md:w-auto md:h-96 2xl:h-140  object-contain pointer-events-none"
             />
           </div>

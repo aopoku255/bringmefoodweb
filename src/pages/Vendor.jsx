@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Navbar2 from "../components/Navbar2";
@@ -16,4 +17,4 @@ const Vendor = () => {
   );
 };
 
-export default Vendor;
+export default memo(Vendor);

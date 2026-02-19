@@ -47,6 +47,7 @@ const SectionTwo = () => {
       src={mac}
       alt="Achieve illustration"
       className="max-h-140 w-auto rounded-xl"
+      loading="lazy" decoding="async"
     />
   </div>
 
@@ -88,7 +89,7 @@ const SectionTwo = () => {
                 key={i}
                 className="border border-gray-100 p-6 flex justify-center items-center"
               >
-                <img src={logo} alt="" className="h-12 object-contain" />
+                <img src={logo} alt="" className="h-12 object-contain" loading="lazy" decoding="async"/>
               </div>
             ))}
           </div>
@@ -101,6 +102,7 @@ const SectionTwo = () => {
               src={order}
               alt="Achieve illustration"
               className="max-h-140 w-auto rounded-xl"
+              loading="lazy" decoding="async"
             />
           </div>
 

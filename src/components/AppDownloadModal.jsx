@@ -40,6 +40,7 @@ const AppDownloadModal = ({ open, onClose, phoneSrc }) => {
               src={phoneSrc}
               alt="App preview"
               className="drop-shadow-2xl h-96 absolute right-30 bottom-0"
+              loading="lazy" decoding="async"
             />
 
           {/* LEFT TEXT */}
