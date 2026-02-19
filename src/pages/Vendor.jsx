@@ -7,7 +7,7 @@ import SectionTwo from '../components/vendor/SectionTwo'
 const Vendor = () => {
   return (
     <section>
-        <Banner/>
+        <Banner showBtn={false} showSub={true} showRight={true}/>
         <SectionOne/>
         <SectionTwo/>
         <Footer/>

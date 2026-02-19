@@ -3,17 +3,28 @@ import { Link } from "react-router-dom";
 import globe from "../assets/icons/global.png";
 import logo from "../assets/images/final-logo-3.png";
 import Footer from "./Footer";
+import AppDownloadModal from "./AppDownloadModal";
+import phone from "../assets/images/device.png"
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [appModalOpen, setAppModalOpen] = useState(false);
 
-  // Optional: lock scroll when menu is open
+  // Lock scroll when either the menu or modal is open
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    const shouldLock = open || appModalOpen;
+    document.body.style.overflow = shouldLock ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, appModalOpen]);
+
+  const openAppModal = () => {
+    setOpen(false); // close mobile menu if open
+    setAppModalOpen(true);
+  };
+
+  const closeAppModal = () => setAppModalOpen(false);
 
   return (
     <header className="w-full">
@@ -28,12 +39,16 @@ const Navbar = () => {
               Become a Vendor
             </Link>
             <Link to="/rider">Become a Rider</Link>
-            <Link
-              to=""
-              className="bg-gray-300 px-4 py-2 rounded-full text-black font-bold"
+
+            {/* ✅ Get the app -> modal */}
+            <button
+              type="button"
+              onClick={openAppModal}
+              className="bg-gray-300 px-4 py-2 rounded-full text-black font-bold cursor-pointer"
             >
               Get the app
-            </Link>
+            </button>
+
             <button
               type="button"
               className="flex items-center gap-x-1"
@@ -44,13 +59,30 @@ const Navbar = () => {
             </button>
           </div>
 
+          {/* (Your desktop top-bar mobile button is hidden already) */}
+        </div>
+      </nav>
+
+      {/* Main bar */}
+      <div className="py-4 px-4 sm:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          {/* Logo */}
+          <img src={logo} alt="BringMe Food" className="h-12 sm:h-16" />
+
+          {/* Desktop CTA */}
+          <Link
+            to=""
+            className="hidden lg:inline-flex font-bold bg-deep-black hover:bg-deep-black/90 text-white px-8 py-3.5 rounded-full"
+          >
+            Log in or sign up
+          </Link>
+
           {/* Mobile menu button */}
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="hidden items-center justify-center h-10 w-10 rounded-full bg-gray-300 hover:bg-gray-400"
+            className="lg:hidden h-10 w-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
             aria-label="Open menu"
-            aria-expanded={open}
           >
             <div className="space-y-1">
               <span className="block h-0.5 w-5 bg-deep-black" />
@@ -59,39 +91,6 @@ const Navbar = () => {
             </div>
           </button>
         </div>
-      </nav>
-
-      {/* Main bar */}
-      <div className="py-4 px-4 sm:px-8">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-
-  {/* Logo */}
-  <img src={logo} alt="BringMe Food" className="h-12 sm:h-16" />
-
-  {/* Desktop CTA */}
-  <Link
-    to=""
-    className="hidden lg:inline-flex font-bold bg-deep-black hover:bg-deep-black/90 text-white px-8 py-3.5 rounded-full"
-  >
-    Log in or sign up
-  </Link>
-
-  {/* Mobile menu button */}
-  <button
-    type="button"
-    onClick={() => setOpen(true)}
-    className="lg:hidden h-10 w-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center"
-    aria-label="Open menu"
-  >
-    <div className="space-y-1">
-      <span className="block h-0.5 w-5 bg-deep-black" />
-      <span className="block h-0.5 w-5 bg-deep-black" />
-      <span className="block h-0.5 w-5 bg-deep-black" />
-    </div>
-  </button>
-
-</div>
-
       </div>
 
       {/* FULL SCREEN MOBILE MENU */}
@@ -120,8 +119,6 @@ const Navbar = () => {
         <div className="px-4 py-6 flex flex-col gap-4">
           <Link
             to="/vendor"
-            // target="_blank"
-            // rel="noreferrer"
             onClick={() => setOpen(false)}
             className="text-lg font-semibold text-deep-black"
           >
@@ -136,13 +133,14 @@ const Navbar = () => {
             Become a Rider
           </Link>
 
-          {/* <Link
-            to=""
-            onClick={() => setOpen(false)}
-            className="bg-gray-200 px-5 py-3 rounded-full font-bold text-center text-deep-black"
+          {/* ✅ Get the app (mobile) -> modal */}
+          <button
+            type="button"
+            onClick={openAppModal}
+            className="bg-gray-200 px-5 py-3 rounded-full font-bold text-center text-deep-black hidden"
           >
             Get the app
-          </Link> */}
+          </button>
 
           <button
             type="button"
@@ -153,7 +151,6 @@ const Navbar = () => {
             <span className="text-sm">English</span>
           </button>
 
-          {/* Login / Signup inside menu */}
           <Link
             to=""
             onClick={() => setOpen(false)}
@@ -162,7 +159,8 @@ const Navbar = () => {
             Log in or sign up
           </Link>
         </div>
-        <Footer/>
+
+        <Footer />
       </div>
 
       {/* Optional overlay click-to-close (behind panel) */}
@@ -172,6 +170,11 @@ const Navbar = () => {
           onClick={() => setOpen(false)}
           aria-hidden="true"
         />
+      )}
+
+      {/* ✅ APP MODAL */}
+      {appModalOpen && (
+       <AppDownloadModal onClose={closeAppModal} open={openAppModal} phoneSrc={phone}/>
       )}
     </header>
   );

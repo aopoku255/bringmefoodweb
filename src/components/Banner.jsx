@@ -1,6 +1,6 @@
 import banner from "../assets/images/banner.png";
 
-const Banner = () => {
+const Banner = ({showRight = true, showSub =true, showBtn}) => {
   return (
     <section className="relative bg-deep-black overflow-hidden">
       {/* Background */}
@@ -20,16 +20,17 @@ const Banner = () => {
               Become a BringMe Food vendor and grow your business
             </h1>
 
-            <p className="text-white/90 text-base sm:text-lg lg:text-xl mt-6 lg:mt-12">
+            {showSub && <p className="text-white/90 text-base sm:text-lg lg:text-xl mt-6 lg:mt-12">
               BringMe Food vendors enjoy more orders, increased sales, and unmatched
               visibility — sign up today and reap the benefits!
-            </p>
-          </div>
+            </p>}
+{           showBtn && <a href="" className="text-white bg-yellow-600 py-3 text-center w-50 font-bold rounded-full mt-8 mx-auto md:mx-0">Sign up as a rider</a>
+}          </div>
 
           {/* RIGHT CARD */}
-          <div className="w-full flex justify-center lg:justify-end pb-16 lg:pb-0">
+          {showRight && <div className="w-full flex justify-center lg:justify-end pb-16 lg:pb-0">
             <div className="bg-white/90 w-full max-w-md lg:max-w-lg py-10 px-6 sm:px-8 rounded-3xl shadow mt-6 lg:mt-0">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-deep-black">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-yellow-600">
                 Let us help your business grow!
               </h2>
 
@@ -43,7 +44,7 @@ const Banner = () => {
               </a>
             </div>
           </div>
-
+}
         </div>
       </div>
     </section>

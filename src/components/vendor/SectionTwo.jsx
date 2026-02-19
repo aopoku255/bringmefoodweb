@@ -52,7 +52,7 @@ const SectionTwo = () => {
 
   {/* TEXT */}
   <div>
-    <h1 className="font-bold text-3xl md:text-4xl">
+    <h1 className="font-bold text-3xl md:text-4xl text-deep-black">
       Powered by Intelligent Ordering Technology
     </h1>
 
@@ -64,12 +64,12 @@ const SectionTwo = () => {
     <ol className="space-y-6 mt-10">
       {achieves.map(({ title, body }, index) => (
         <li key={title} className="flex gap-5">
-          <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deep-black text-white text-xs font-semibold shrink-0">
+          <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-600 text-white text-xs font-semibold shrink-0">
             {index + 1}
           </span>
 
           <div>
-            <p className="font-semibold">{title}</p>
+            <p className="font-bold text-deep-black">{title}</p>
             <p className="mt-1 text-black/60">{body}</p>
           </div>
         </li>
@@ -80,7 +80,7 @@ const SectionTwo = () => {
 
 
         <div className="my-40">
-          <h1 className="text-3xl font-bold ">Our partnerships expand beyond restaurants</h1>
+          <h1 className="text-3xl font-bold text-deep-black">Our partnerships expand beyond restaurants</h1>
           <p className="text-xl text-black/70 mt-8">We partner with businesses of all types.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             {[aws, google, googleapis, flutterwave].map((logo, i) => (
@@ -106,7 +106,7 @@ const SectionTwo = () => {
 
           {/* LEFT TEXT */}
           <div>
-            <h1 className="font-bold text-3xl md:text-4xl">
+            <h1 className="font-bold text-3xl md:text-4xl text-deep-black">
               Starting with BringMe Food is easy
             </h1>
 
@@ -115,16 +115,16 @@ const SectionTwo = () => {
             </p>
 
             <ol className="space-y-6 mt-10">
-              {orders.map(({ title, body }, index) => (
+              {orders.map(({ title }, index) => (
                 <li key={title} className="flex gap-5">
                   {/* Number Circle */}
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deep-black text-white text-xs font-semibold shrink-0">
+                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-600 text-white text-xs font-semibold shrink-0">
                     {index + 1}
                   </span>
 
                   {/* Text */}
                   <div>
-                    <p className="font-semibold">{title}</p>
+                    <p className="font-bold text-deep-black">{title}</p>
                     {/* <p className="mt-1 text-black/60">{body}</p> */}
                   </div>
                 </li>

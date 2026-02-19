@@ -40,7 +40,7 @@ const SectionOne = () => {
           
           {/* LEFT TEXT */}
           <div>
-            <h1 className="font-bold text-3xl md:text-4xl">
+            <h1 className="font-bold text-3xl md:text-4xl text-deep-black">
               Achieve more with BringMe Food
             </h1>
 
@@ -53,13 +53,13 @@ const SectionOne = () => {
                 <li key={title} className="flex gap-5">
                   
                   {/* Number Circle */}
-                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-deep-black text-white text-xs font-semibold shrink-0">
+                  <span className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-600 text-white text-xs font-semibold shrink-0">
                     {index + 1}
                   </span>
 
                   {/* Text */}
                   <div>
-                    <p className="font-semibold">{title}</p>
+                    <p className="font-bold text-deep-black">{title}</p>
                     <p className="mt-1 text-black/60">{body}</p>
                   </div>
 

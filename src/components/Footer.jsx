@@ -53,13 +53,15 @@ const Footer = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-end gap-3">
             <a
-              href=""
+              href="https://onelink.to/s72pq8"
+              target="_blank"
               className="bg-gray-200 py-3 px-8 rounded-full font-bold text-deep-black/90 text-center"
             >
               Get the app
             </a>
             <a
-              href=""
+              href="https://onelink.to/hze6zp"
+              target="_blank"
               className="bg-gray-200 py-3 px-8 rounded-full font-bold text-deep-black/90 text-center"
             >
               Get the Rider app
