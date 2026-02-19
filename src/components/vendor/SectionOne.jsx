@@ -34,7 +34,7 @@ const SectionOne = () => {
 
 
   return (
-    <section className="pt-68 pb-40">
+    <section className="md:pt-68 pt-16 md:pb-40 pb-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           

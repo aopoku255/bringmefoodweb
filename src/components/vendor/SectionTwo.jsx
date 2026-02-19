@@ -79,7 +79,7 @@ const SectionTwo = () => {
 </div>
 
 
-        <div className="my-40">
+        <div className="md:my-40 my-20">
           <h1 className="text-3xl font-bold text-deep-black">Our partnerships expand beyond restaurants</h1>
           <p className="text-xl text-black/70 mt-8">We partner with businesses of all types.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">

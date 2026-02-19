@@ -26,6 +26,8 @@ const Navbar = () => {
 
   const closeAppModal = () => setAppModalOpen(false);
 
+  
+
   return (
     <header className="w-full">
       {/* Top bar */}
@@ -35,7 +37,7 @@ const Navbar = () => {
 
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-x-6 font-semibold text-deep-black">
-            <Link to="/vendor" target="_blank" rel="noreferrer">
+            <Link to="/vendor" rel="noreferrer">
               Become a Vendor
             </Link>
             <Link to="/rider">Become a Rider</Link>

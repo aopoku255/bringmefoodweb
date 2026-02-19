@@ -1,18 +1,19 @@
-
-import Banner from '../components/Banner'
-import Footer from '../components/Footer'
-import SectionOne from '../components/vendor/SectionOne'
-import SectionTwo from '../components/vendor/SectionTwo'
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
+import Navbar2 from "../components/Navbar2";
+import SectionOne from "../components/vendor/SectionOne";
+import SectionTwo from "../components/vendor/SectionTwo";
 
 const Vendor = () => {
   return (
     <section>
-        <Banner showBtn={false} showSub={true} showRight={true}/>
-        <SectionOne/>
-        <SectionTwo/>
-        <Footer/>
+      <Navbar2 />
+      <Banner showBtn={false} showSub={true} showRight={true} />
+      <SectionOne />
+      <SectionTwo />
+      <Footer />
     </section>
-  )
-}
+  );
+};
 
-export default Vendor
+export default Vendor;
